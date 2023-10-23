@@ -4,8 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </head>
 <body>
+    <div id="topContainer">
+        <div class="header">
+            <div class="burger-wrapper">
+                <div class="burger"></div>
+            </div>
+            <div class="back_btn">
+                <div class="circle"></div>
+                <div class="text">Back</div>
+            </div>
+        </div>
+        <div class="nav">
+            <ul class="nav_main">
+                <li> <a class="nav_link">Home </a></li>
+                <li> <a class="nav_link">Listeners</a></li>
+                <li> <a class="nav_link">Stats</a></li>
+            </ul>
+            <div class="nav_divider"></div>
+            <ul class="nav_sub">
+                <li><a class="nav_link" href="">About </a></li>
+                <li><a class="nav_link" href="">Contact </a></li>
+            </ul>
+        </div>
+        <div class="mini-player">
+            <div class="track_info_wrapper">
+                <div class="track_info">
+                    <div class="thumb"></div>
+                    <div class="info">
+                        <div class="title">Friday Comes</div>
+                        <div class="artist">Early</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mini-player_btn_wrapper">
+                <i class="btn-prev fa fa-step-backward" aria-hidden="true"></i>
+                <div class="btn-switch">
+                    <i class="btn-play fa fa-play" aria-hidden="true"></i>
+                    <i class="btn-pause fa fa-pause" aria-hidden="true"></i>
+                </div>
+                <i class="btn-next fa fa-step-forward" aria-hidden="true" id="fa-step-forward"></i>
+                <i class="btn-open-player fa fa-list" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="dim"></div>
+        <div class="player" id="player">
+            <div class="playback_wrapper">
+                <div class="playback_blur"></div>
+                <div class="playback_thumb"></div>
+                <div class="playback_info">
+                    <div class="title">Friday Comes</div>
+                    <div class="artist">Early</div>
+                </div>
+                <div class="playback_btn_wrapper">
+                    <i class="btn-prev fa fa-step-backward" aria-hidden="true"></i>
+                    <div class="btn-switch">
+                        <i class="btn-play fa fa-play" aria-hidden="true"></i>
+                        <i class="btn-pause fa fa-pause" aria-hidden="true"></i>
+                    </div>
+                    <i class="btn-next fa fa-step-forward" aria-hidden="true"></i>
+                </div>
+                <div class="playback_timeline">
+                    <div class="playback_timeline_start-time">00:31</div>
+                    <div class="playback_timeline_slider">
+                        <div class="slider_base"></div>
+                        <div class="slider_progress"></div>
+                        <div class="slider_handle"></div>
+                    </div>
+                    <div class="playback_timeline_end-time">03:11</div>
+                </div>
+            </div>
+        </div>
+    </div>
     
+    <div id="leftContainer">
+
+    </div>
+
+
+    <div id="mainContainer">
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineMax.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    <script src="index.js"></script>
 </body>
 </html>
