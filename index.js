@@ -448,3 +448,16 @@ function initMap() {
 }
 
 window.initMap = initMap;
+
+// ==== Items ==== 
+
+
+function expandItem(item) {
+	const items = document.querySelectorAll('.item');
+	items.forEach((el) => {
+	  el.classList.remove('expanded');
+	});
+  
+	item.classList.add('expanded');
+  }
+  
