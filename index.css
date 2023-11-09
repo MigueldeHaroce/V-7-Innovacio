@@ -764,18 +764,25 @@ body {
 
 .item {
   width: 95%; 
-  height: 600px;
-  padding: 10px;
-  border: 1px solid #ccc;
+  height: 150px;
+  padding: 20px;
+  border: 2.5px solid #4b749b;
   cursor: pointer;
-  margin-left: 50px;
-  margin-right: 100px;
+  margin: auto;
+  border-radius: 10px;
 }
 .item:hover {
 
 }
 
 .item.expanded {
-
+  height: 600px;
   background: #ff0000;
+}
+
+.item-content {
+	width: 50%;
+	height: auto;
+	border: 2.5px solid #4b749b;
+	display: flex;
 }
