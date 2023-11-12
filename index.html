@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
     <div id="topContainer">
@@ -38,6 +40,7 @@
                 <i class="btn-next fa fa-step-forward" aria-hidden="true" id="fa-step-forward" style="margin-left: -24.5px;"></i>
                 <i class="btn-open-player fa fa-list" aria-hidden="true"></i>
             </div>
+            <div id="uploadBtn">Upload</div>
         </div>
         <div class="dim"></div>
         <div class="player" id="player">
@@ -83,34 +86,62 @@
     
     <div id="leftleftContainer" class="leftleftContainer">
         <div class="leftleftContainer-header">
-            <div class="leftleftContainer-header-title">Title</div>
+            <div class="leftleftContainer-header-title"></div>
             <div class="leftleftContainer-header-close" onclick="closeLeftleftContainer()"><i class="fa fa-times" aria-hidden="true"></i></div>
         </div>
         <div class="leftleftContainer-content">
             <div class="leftleftContainer-content-item">
-                <div class="leftleftContainer-content-item-title">Title</div>
-                <div class="leftleftContainer-content-item-content">Content</div>
+                <div class="leftleftContainer-content-item-title"></div>
+                <div class="leftleftContainer-content-item-content"></div>
             </div>
    
     </div>
 
 
     <div class="mainContainer" id="mainContainer">
-        <div class="item" onclick="expandItem(this)">
-            Item 1
-            <div class="item-content">
-                Sub Item 1
+        <div class="swiper-container-wrapper">
+            <div class="swiper-container gallery-top">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    <div class="title">Responsive vertical thumbnail gallery</div>
+                    <div class="description">Scale screen to see effect</div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="title">Slide 2</div>
+                    <div class="description">Lorem ipsum dolor sit amet</div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="title">Slide 3</div>
+                    <div class="description">Lorem ipsum dolor sit amet</div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="title">Slide 4</div>
+                    <div class="description">Lorem ipsum dolor sit amet</div>
+                    </div>
+                    <div class="swiper-slide">
+                    <div class="title">Slide 5</div>
+                    <div class="description">Lorem ipsum dolor sit amet</div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1675789652617-d84e3d201ef4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80');">
+                    <div class="title">Slide 6</div>
+                    <div class="description">Lorem ipsum dolor sit amet</div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-            <div class="item-content">
-                Sub Item 2
-            </div>
-        
-        </div>
-        <div class="item" onclick="expandItem(this)">Item 2</div>
-        <div class="item" onclick="expandItem(this)">Item 3</div>
-        <div class="item" onclick="expandItem(this)">Item 4</div>
 
-        <!-- Add more items as needed -->
+            <div class="swiper-container gallery-thumbs">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1669327195331-cd47e0d5eef0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=874&q=100');"></div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1675789652617-d84e3d201ef4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80');"></div>
+                </div>
+            </div>
+        </div>
     </div>
       
     <script
@@ -122,6 +153,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineMax.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
 
     <script src="index.js"></script>
