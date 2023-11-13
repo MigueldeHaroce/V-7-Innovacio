@@ -741,6 +741,22 @@ body {
 	padding-right: 15px;
 	font-size: 17.5px;
 	border-right: 1px solid var(--text);
+	cursor: pointer;
+	user-select: none;
+}
+
+#uploadBtn:hover {
+	color: var(--accent);
+	border-right: 1px solid var(--text);
+}
+
+#uploadBtn:active span {
+	transform: scale(0.9090909090909091); /* 1 / 1.1 */
+
+}
+
+#uploadBtn span {
+	display: inline-block;
 }
 
 /******************************************************************************************/
@@ -817,12 +833,10 @@ body {
 	border: 2.5px solid var(--accent);
 	color: var(--text);
 	border-radius: 10px;
-	/* Center slide text vertically */
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
 	align-items: center;
-	/* Slide content */
 }
 
 .swiper-slide .description, .swiper-slide .title {
