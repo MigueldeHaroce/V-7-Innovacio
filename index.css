@@ -984,4 +984,13 @@ body {
 .gallery-thumbs .swiper-slide-thumb-active {
 	opacity: 1;
 }
- 
+
+
+.imagesContainer {
+	display: inline;
+	top: 10px;
+	left: 0px;
+	width: 80%;
+	height: auto;
+	border-radius: 10px;
+}
