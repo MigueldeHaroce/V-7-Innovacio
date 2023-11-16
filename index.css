@@ -14,6 +14,8 @@
   --primary: #233648;
   --secondary: #110d08;
   --accent: #4b749b;
+  --bg_01: #3881c6;
+  --bg_02: #110d08;
 }
 
 :root[data-theme="light"] {
@@ -22,6 +24,8 @@
   --primary: #b7cadc;
   --secondary: #f7f3ee;
   --accent: #648eb4;
+  --bg_01: #84a6c7;
+  --bg_02: #a7a7a7;
 }
 
 
@@ -53,7 +57,7 @@ a {
 }
 body {
 	 margin: 0;
-	 background: linear-gradient(308deg, #3881c6, #110d08);
+	 background: linear-gradient(308deg, var(--bg_01), var(--bg_02));
 	 background-size: 400% 400%;
  
 	 -webkit-animation: s 0s ease infinite;
