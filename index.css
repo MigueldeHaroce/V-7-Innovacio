@@ -905,6 +905,22 @@ body {
 	align-items: center;
 }
 
+.swiper-slide.blur {
+  /* Add your blur styles here */
+  filter: blur(5px);
+}
+
+.swiper-slide .blur {
+  /* Add your blur styles here */
+  filter: blur(5px) !important; /* Change the value to adjust the intensity of the blur */
+}
+
+.swiper-slide-active .blur {
+  /* Add your blur styles here */
+  filter: blur(5px) !important; /* Change the value to adjust the intensity of the blur */
+}
+	
+
 .swiper-slide .description, .swiper-slide .title {
 	display: block;
 	opacity: 0;
@@ -994,3 +1010,27 @@ body {
 	height: auto;
 	border-radius: 10px;
 }
+
+.descriptionBtn {
+	position: absolute;
+	bottom: 10px;
+	right: 15px;
+	color: var(--text);
+	border: none;
+	cursor: pointer;
+	user-select: none;
+}
+
+.descriptionBtn:hover {
+	opacity: 0.8;
+}
+
+.descriptionBtn:active {
+	transform: scale(0.9); /* 1 / 1.1 */
+	opacity: 0.6;
+}
+
+.item.blur {
+	/* Add your blur styles here */
+	filter: blur(5px);
+  }
