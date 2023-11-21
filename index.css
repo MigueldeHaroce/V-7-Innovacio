@@ -905,21 +905,9 @@ body {
 	align-items: center;
 }
 
-.swiper-slide.blur {
-  /* Add your blur styles here */
-  filter: blur(5px);
+.blur-content {
+	filter: blur(5px);
 }
-
-.swiper-slide .blur {
-  /* Add your blur styles here */
-  filter: blur(5px) !important; /* Change the value to adjust the intensity of the blur */
-}
-
-.swiper-slide-active .blur {
-  /* Add your blur styles here */
-  filter: blur(5px) !important; /* Change the value to adjust the intensity of the blur */
-}
-	
 
 .swiper-slide .description, .swiper-slide .title {
 	display: block;
