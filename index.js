@@ -524,12 +524,10 @@ $(function () {
 		galleryTop.slideTo(galleryThumbs.activeIndex);
 	});
 
-    const descriptionBtn = document.getElementById('descriptionBtn');
-    descriptionBtn.addEventListener('click', function() {
-        const activeSlide = document.querySelector('.swiper-slide-active');
-        if (activeSlide) {
-            expandItem(activeSlide);
-            
-        }
-    });
+	const descriptionBtn = document.getElementById('descriptionBtn');
+	descriptionBtn.addEventListener('click', expandItem);
+	
+	galleryTop.on("slideChangeTransitionEnd", function () {
+		galleryThumbs.slideTo(galleryTop.activeIndex);
+	});
 });
