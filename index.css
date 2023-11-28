@@ -4,6 +4,8 @@
 		 -add responsiveness
 		 -change color theme
 		 -add more pages
+		 blur
+		 title
 */
 
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
@@ -905,8 +907,23 @@ body {
 	align-items: center;
 }
 
-.blur-content {
+.blur-content.blur {
+
 	filter: blur(5px);
+
+}
+
+.imgs {
+	position: relative;
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	margin-bottom: 50px !important;
+
+	/*REVISE THIS /!\ */
+
 }
 
 .swiper-slide .description, .swiper-slide .title {
@@ -1018,7 +1035,45 @@ body {
 	opacity: 0.6;
 }
 
-.item.blur {
-	/* Add your blur styles here */
-	filter: blur(5px);
-  }
+.titleArt {
+	position: relative;
+
+	display: block !important;
+	opacity: 0 !important;
+	color: var(--text);
+	z-index: 1;
+}
+
+.textArt {
+	position: fixed;
+	top: 46%;
+	left: 0px;
+	display: flex !important;
+	justify-content: center;
+	align-items: baseline;
+	color: var(--text);
+	z-index: 1;
+	flex-direction: column;
+	margin: 0px 70px 0px 70px;
+	
+}
+
+.descriptionArt {
+	position: relative;
+	
+
+	display: block !important;
+	opacity: 0 !important;
+	color: var(--text);
+	z-index: 1;
+}
+
+.titleArt.show{
+	display: flex !important;
+	opacity: 1 !important;
+}
+
+.descriptionArt.show{
+	display: flex !important;
+	opacity: 1 !important;
+}

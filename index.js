@@ -456,17 +456,28 @@ function expandItem(item) {
     items.forEach((el) => {
         el.classList.remove('expanded');
         el.querySelector('.blur-content').classList.remove('blur');
-		console.log("el" + itemsx);
+		el.querySelector('.titleArt').classList.remove('show');
+		el.querySelector('.descriptionArt').classList.remove('show');
+
+		console.log("el1" + items);
     });
 
     if (item.classList.contains('expanded')) {
         item.classList.remove('expanded');
         item.querySelector('.blur-content').classList.remove('blur');
-		console.log("el" + item);
+		item.querySelector('.titleArt').classList.remove('show');
+		item.querySelector('.descriptionArt').classList.remove('show');
+
+
+		console.log("el2" + item);
     } else {
         item.classList.add('expanded');
         item.querySelector('.blur-content').classList.add('blur');
-		console.log("el" + item);
+		item.querySelector('.titleArt').classList.add('show');
+		item.querySelector('.descriptionArt').classList.add('show');
+
+
+		console.log("el3" + item);
     }
 }
 
