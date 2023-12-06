@@ -607,3 +607,10 @@ window.addEventListener('touchmove', function(e) {
 window.addEventListener('touchend', mouseup, false);
 window.addEventListener('mouseup', mouseup, false);
 
+// ==== Upload ====
+
+const uploadBtn = document.getElementById('uploadBtn');
+
+uploadBtn.addEventListener('click', () => {
+	window.location.href = 'uploadPage.html';
+});
