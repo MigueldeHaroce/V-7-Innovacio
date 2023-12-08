@@ -59,7 +59,7 @@ a {
 }
 body {
 	 margin: 0;
-	 background: linear-gradient(308deg, var(--bg_01), var(--bg_02));
+	 background: linear-gradient(308deg, #3881c6, #110d08);
 	 background-size: 400% 400%;
  
 	 -webkit-animation: s 0s ease infinite;

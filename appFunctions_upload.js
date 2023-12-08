@@ -25,9 +25,9 @@ fileInput.addEventListener("click", () => {
 
 fileInput.addEventListener("change", e => {
 	console.log(" > " + fileInput.value)
-	uploadIcon.innerHTML = 'check_circle';
+	uploadIcon.innerHTML = 'Share your art!';
 	dragDropText.innerHTML = 'File Dropped Successfully!';
-	document.querySelector(".label").innerHTML = `drag & drop or <span class="browse-files"> <input type="file" class="default-file-input" style=""/> <span class="browse-files-text" style="top: 0;"> browse file</span></span>`;
+	document.querySelector(".div").innerHTML = `drag & drop or <span class="browse-files"> <input type="file" class="default-file-input" style=""/> <span class="browse-files-text" style="top: 0;"> browse file</span></span>`;
 	uploadButton.innerHTML = `Upload`;
 	fileName.innerHTML = fileInput.files[0].name;
 	fileSize.innerHTML = (fileInput.files[0].size/1024).toFixed(1) + " KB";
@@ -74,13 +74,13 @@ if(isAdvancedUpload) {
 		draggableFileArea.addEventListener(evt, e => {
 			e.preventDefault();
 			e.stopPropagation();
-			uploadIcon.innerHTML = 'file_download';
+			uploadIcon.innerHTML = 'Drop your file here!';
 			dragDropText.innerHTML = 'Drop your file here!';
 		});
 	});
 
 	draggableFileArea.addEventListener("drop", e => {
-		uploadIcon.innerHTML = 'check_circle';
+		uploadIcon.innerHTML = 'Share your art!';
 		dragDropText.innerHTML = 'File Dropped Successfully!';
 		document.querySelector(".label").innerHTML = `drag & drop or <span class="browse-files"> <input type="file" class="default-file-input" style=""/> <span class="browse-files-text" style="top: -23px; left: -20px;"> browse file</span> </span>`;
 		uploadButton.innerHTML = `Upload`;
@@ -104,4 +104,12 @@ removeFileButton.addEventListener("click", () => {
 	dragDropText.innerHTML = 'Drag & drop any file here';
 	document.querySelector(".label").innerHTML = `or <span class="browse-files"> <input type="file" class="default-file-input"/> <span class="browse-files-text">browse file</span> <span>from device</span> </span>`;
 	uploadButton.innerHTML = `Upload`;
+});
+
+// ==== Home Page ==== //
+
+const homeBtn = document.getElementById('homeBtn');
+
+homeBtn.addEventListener('click', () => {
+	window.location.href = 'index.html';
 });

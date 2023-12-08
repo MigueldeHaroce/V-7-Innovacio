@@ -59,7 +59,7 @@ a {
 }
 body {
 	 margin: 0;
-	 background: linear-gradient(308deg, var(--bg_01), var(--bg_02)) !important;
+	 background: linear-gradient(308deg, #3881c6, #110d08);
 	 background-size: 400% 400%;
  
 	 -webkit-animation: s 0s ease infinite;
@@ -881,6 +881,9 @@ body {
 	width: 100%;
 	height: 100%;
 	text-align: center;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .drag-file-area .upload-icon {
 	font-size: 50px;
@@ -892,7 +895,13 @@ body {
 .drag-file-area label {
 	font-size: 19px;
 }
-.drag-file-area label .browse-files-text {
+
+.label {
+	font-size: 19px;
+	width: 290px !important;
+}
+
+.browse-files-text {
 	color: var(--accent);
 	font-weight: bolder;
 	cursor: pointer;
