@@ -58,16 +58,15 @@ a {
 	 text-decoration: none;
 }
 body {
-	 margin: 0;
-	 background: linear-gradient(308deg, #3881c6, #110d08);
+	 background: linear-gradient(252deg, #00b788, #000000);
 	 background-size: 400% 400%;
  
-	 -webkit-animation: s 0s ease infinite;
-	 animation: s 0s ease infinite;
+	 -webkit-animation: AnimationName 35s ease infinite;
+	 -moz-animation: AnimationName 35s ease infinite;
+	 animation: AnimationName 35s ease infinite;
 
 	 font-family: 'Oswald', sans-serif;
-	 -webkit-font-smoothing: antialiased;
-	 -moz-osx-font-smoothing: grayscale;
+
 	 font-size: 1rem;
 	 overflow: hidden;
 	 width: 100vw;
@@ -85,25 +84,22 @@ body {
 	-webkit-user-drag: none;
 }
 
-@-webkit-keyframes s {
-    0%{background-position:0% 39%}
-    50%{background-position:100% 62%}
-    100%{background-position:0% 39%}
-}
-@keyframes s {
-    0%{background-position:0% 39%}
-    50%{background-position:100% 62%}
-    100%{background-position:0% 39%}
-}
 
 
-@keyframes drift {
-	from {
-		transform: rotate(0deg);
-	}
-	from {
-		transform: rotate(360deg);
-	}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 .line {
@@ -917,6 +913,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden; 
+	height: 100%;
 }
 
 .blur-content.blur {
@@ -924,14 +921,25 @@ body {
     border-radius: 10px;
 }
 
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  filter: blur(8px);
+  z-index: -1;
+}
+
 .imgs {
-    position: relative;
-    object-fit: cover;
-    width: 100%;
-    height: 100%; 
-    z-index: 0;
-    border-radius: 10px;
-    overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .swiper-slide .description,

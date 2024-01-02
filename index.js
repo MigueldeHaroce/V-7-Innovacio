@@ -534,6 +534,10 @@ $(function () {
     });
 });
 
+// JavaScript code to change the background image of each slider
+
+
+
 /* Cursor */
 
 function lerp(start, end, amount) {
