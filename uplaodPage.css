@@ -846,7 +846,7 @@ body {
 	color: var(--text);
 	top: 85px;
 	width: 95%;
-	height: 87.5%;
+	height: 85%;
 	z-index: -1;
     background-color: var(--primary);
     border: 2px dashed var(--secondary);
@@ -877,7 +877,7 @@ body {
 .drag-file-area {
 	border-radius: 40px;
 	margin: 10px 0 15px;
-	padding: 30px 50px;
+	padding: 0px 50px;
 	width: 100%;
 	height: 100%;
 	text-align: center;
@@ -907,11 +907,11 @@ body {
 	cursor: pointer;
 }
 .browse-files span {
-	position: relative;
 	top: -25px;
 }
 .default-file-input {
 	opacity: 0;
+	display: none;
 }
 .cannot-upload-message {
 	background-color: #ffc6c4;
@@ -919,7 +919,7 @@ body {
 	display: flex;
 	align-items: center;
 	margin: 5px 0;
-	padding: 5px 10px 5px 30px;
+	padding: 5px 10px 5px 20px;
 	border-radius: 5px;
 	color: #BB0000;
 	display: none;
@@ -932,14 +932,14 @@ body {
 	padding-right: 10px;
 }
 .cannot-upload-message span:last-child {
-	padding-left: 20px;
+	padding-left: 5px;
 	cursor: pointer;
 }
 .file-block {
 	color: #f7fff7;
 	background-color: var(--accent);
   	transition: all 1s;
-	width: 390px;
+	width: 245px;
 	position: relative;
 	display: none;
 	flex-direction: row;
@@ -973,9 +973,9 @@ body {
 	height: 5px;
 	border-radius: 25px;
 	background-color: #4BB543;
+	top: 43px;
 }
 .upload-button {
-	font-family: 'Montserrat';
 	background-color: var(--accent);
 	color: #f7fff7;
 	display: flex;
@@ -986,6 +986,19 @@ body {
 	margin: 10px;
 	padding: 7.5px 50px;
 	cursor: pointer;
+}
+
+.upload-button:hover {
+	opacity: 0.8;
+}
+
+.upload-button:active {
+	opacity: 0.6;
+	scale: 0.95;
+}
+
+.finishBtn {
+	background-color: var(--accent);
 }
 
 /* Cursor */

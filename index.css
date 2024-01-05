@@ -16,7 +16,7 @@
   --primary: #233648;
   --secondary: #110d08;
   --accent: #4b749b;
-  --bg_01: #3881c6;
+  --bg_01: #4b749b;
   --bg_02: #110d08;
 }
 
@@ -58,7 +58,7 @@ a {
 	 text-decoration: none;
 }
 body {
-	 background: linear-gradient(252deg, #00b788, #000000);
+	 background: linear-gradient(252deg, var(--bg_01), var(--bg_02));
 	 background-size: 400% 400%;
  
 	 -webkit-animation: AnimationName 35s ease infinite;
@@ -153,8 +153,8 @@ body {
 
 .header {
 	position: fixed;
-	left: 2.2vw;
-	top: 2.2vw;
+	left: 2%;
+	top: 4.25%;
 	margin-left: -4px;
 	margin-top: -6px;
 	color: #252120;
@@ -289,8 +289,8 @@ body {
 	color: var(--text);
 	position: fixed;
 	height: 32px;
-	left: 4.2vw;
-	top: 1.9vw;
+	left: 3.5%;
+	top: 3.75%;
 	z-index: 1;
 	display: flex;
 	align-items: center;
@@ -904,7 +904,7 @@ body {
     text-align: center;
     background-size: cover;
     background-position: center;
-    background-color: var(--secondary);
+    background-color: #110d08;
     border: 2.5px solid var(--accent);
     color: var(--text);
     border-radius: 10px;
@@ -919,6 +919,8 @@ body {
 .blur-content.blur {
     filter: blur(10px);
     border-radius: 10px;
+	width: 100%;
+	height: 100%;
 }
 
 .background {
@@ -1039,12 +1041,13 @@ body {
 
 .descriptionBtn {
 	position: absolute;
-	bottom: 10px;
-	right: 15px;
+	bottom: 14%;
+	right: 1%;
 	color: var(--text);
 	border: none;
 	cursor: pointer;
 	user-select: none;
+	z-index: 6;
 }
 
 .descriptionBtn:hover {

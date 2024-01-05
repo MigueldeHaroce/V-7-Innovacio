@@ -524,7 +524,7 @@ $(function () {
 		galleryTop.slideTo(galleryThumbs.activeIndex);
 	});
 
-    const descriptionBtn = document.getElementById('descriptionBtn');
+    var descriptionBtn = document.querySelector('.descriptionBtn');
     descriptionBtn.addEventListener('click', function() {
         const activeSlide = document.querySelector('.swiper-slide-active');
         if (activeSlide) {

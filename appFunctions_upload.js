@@ -16,6 +16,7 @@ let fileSize = document.querySelector(".file-size");
 let progressBar = document.querySelector(".progress-bar");
 let removeFileButton = document.querySelector(".remove-file-icon");
 let uploadButton = document.querySelector(".upload-button");
+let finishBtn = document.querySelector(".finishBtn");
 let fileFlag = 0;
 
 fileInput.addEventListener("click", () => {
@@ -44,9 +45,9 @@ uploadButton.addEventListener("click", () => {
     		var width = 0;
     		var id = setInterval(frame, 50);
     		function frame() {
-      			if (width >= 390) {
+      			if (width >= 220) {
         			clearInterval(id);
-					uploadButton.innerHTML = `<span class="material-icons-outlined upload-button-icon"> check_circle </span> Uploaded`;
+					uploadButton.innerHTML = `<span class="finishBtn"> Done </span>`;
       			} else {
         			width += 5;
         			progressBar.style.width = width + "px";
@@ -75,7 +76,7 @@ if(isAdvancedUpload) {
 			e.preventDefault();
 			e.stopPropagation();
 			uploadIcon.innerHTML = 'Drop your file here!';
-			dragDropText.innerHTML = 'Drop your file here!';
+			dragDropText.innerHTML = '';
 		});
 	});
 
@@ -89,7 +90,15 @@ if(isAdvancedUpload) {
 		fileInput.files = files;
 		console.log(files[0].name + " " + files[0].size);
 		console.log(document.querySelector(".default-file-input").value);
-		fileName.innerHTML = files[0].name;
+		const maxLength = 15;
+		let fileNameText = files[0].name;
+		
+		if (fileNameText.length > maxLength) {
+		  fileNameText = fileNameText.substring(0, maxLength) + '...';
+		}
+		
+		fileName.innerHTML = fileNameText;
+		
 		fileSize.innerHTML = (files[0].size/1024).toFixed(1) + " KB";
 		uploadedFile.style.cssText = "display: flex;";
 		progressBar.style.width = 0;
@@ -100,10 +109,16 @@ if(isAdvancedUpload) {
 removeFileButton.addEventListener("click", () => {
 	uploadedFile.style.cssText = "display: none;";
 	fileInput.value = '';
-	uploadIcon.innerHTML = 'file_upload';
+	uploadIcon.innerHTML = 'Share your art!';
 	dragDropText.innerHTML = 'Drag & drop any file here';
 	document.querySelector(".label").innerHTML = `or <span class="browse-files"> <input type="file" class="default-file-input"/> <span class="browse-files-text">browse file</span> <span>from device</span> </span>`;
 	uploadButton.innerHTML = `Upload`;
+});
+
+uploadButton.addEventListener("click", () => {
+	if (uploadButton.innerHTML == `<span class="finishBtn"> Done </span>`) {
+		window.location.href = 'index.html';
+	}
 });
 
 // ==== Home Page ==== //
