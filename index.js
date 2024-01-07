@@ -1,4 +1,3 @@
-// ==== Themes ====
 
 const themeBtn = document.getElementById('themeBtn');
 const root = document.documentElement;
@@ -617,4 +616,10 @@ const uploadBtn = document.getElementById('uploadBtn');
 
 uploadBtn.addEventListener('click', () => {
 	window.location.href = 'uploadPage.html';
+});
+
+const rewardsBtn = document.getElementById('rewardsBtn');
+
+rewardsBtn.addEventListener('click', () => {
+	window.location.href = 'rewardsBtn.html';
 });

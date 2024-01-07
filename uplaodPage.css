@@ -16,7 +16,7 @@
   --primary: #233648;
   --secondary: #110d08;
   --accent: #4b749b;
-  --bg_01: #3881c6;
+  --bg_01: #4b749b;
   --bg_02: #110d08;
 }
 
@@ -58,16 +58,15 @@ a {
 	 text-decoration: none;
 }
 body {
-	 margin: 0;
-	 background: linear-gradient(308deg, #3881c6, #110d08);
+	 background: linear-gradient(252deg, var(--bg_01), var(--bg_02));
 	 background-size: 400% 400%;
  
-	 -webkit-animation: s 0s ease infinite;
-	 animation: s 0s ease infinite;
+	 -webkit-animation: AnimationName 35s ease infinite;
+	 -moz-animation: AnimationName 35s ease infinite;
+	 animation: AnimationName 35s ease infinite;
 
 	 font-family: 'Oswald', sans-serif;
-	 -webkit-font-smoothing: antialiased;
-	 -moz-osx-font-smoothing: grayscale;
+
 	 font-size: 1rem;
 	 overflow: hidden;
 	 width: 100vw;
@@ -85,25 +84,22 @@ body {
 	-webkit-user-drag: none;
 }
 
-@-webkit-keyframes s {
-    0%{background-position:0% 39%}
-    50%{background-position:100% 62%}
-    100%{background-position:0% 39%}
-}
-@keyframes s {
-    0%{background-position:0% 39%}
-    50%{background-position:100% 62%}
-    100%{background-position:0% 39%}
-}
 
 
-@keyframes drift {
-	from {
-		transform: rotate(0deg);
-	}
-	from {
-		transform: rotate(360deg);
-	}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 .line {
@@ -157,8 +153,8 @@ body {
 
 .header {
 	position: fixed;
-	left: 2.2vw;
-	top: 2.2vw;
+	left: 2%;
+	top: 4.25%;
 	margin-left: -4px;
 	margin-top: -6px;
 	color: #252120;
@@ -293,8 +289,8 @@ body {
 	color: var(--text);
 	position: fixed;
 	height: 32px;
-	left: 4.2vw;
-	top: 1.9vw;
+	left: 3.5%;
+	top: 3.75%;
 	z-index: 1;
 	display: flex;
 	align-items: center;
@@ -999,6 +995,29 @@ body {
 
 .finishBtn {
 	background-color: var(--accent);
+}
+
+#rewardsBtn {
+	margin-left: 15px;
+	padding-right: 15px;
+	font-size: 17.5px;
+	border-right: 1px solid var(--text);
+	cursor: pointer;
+	user-select: none;
+}
+
+#rewardsBtn:hover {
+	color: var(--accent);
+	border-right: 1px solid var(--text);
+}
+
+#rewardsBtn:active span {
+	transform: scale(0.9090909090909091); /* 1 / 1.1 */
+
+}
+
+#rewardsBtn span {
+	display: inline-block;
 }
 
 /* Cursor */

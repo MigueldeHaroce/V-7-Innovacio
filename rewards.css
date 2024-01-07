@@ -810,7 +810,7 @@ body {
 	opacity: 0;
 }
 
-#uploadBtn {
+#homeBtn {
 	margin-left: 15px;
 	padding-right: 15px;
 	font-size: 17.5px;
@@ -819,19 +819,100 @@ body {
 	user-select: none;
 }
 
-#uploadBtn:hover {
+#homeBtn:hover {
 	color: var(--accent);
 	border-right: 1px solid var(--text);
 }
 
-#uploadBtn:active span {
+#homeBtn:active span {
 	transform: scale(0.9090909090909091); /* 1 / 1.1 */
 
 }
 
-#uploadBtn span {
+#homeBtn span {
 	display: inline-block;
 }
+
+/***************************************/
+
+#mainContainer {
+	position: fixed;
+    display: flex;
+    left: 2.5%;
+	color: var(--text);
+	top: 85px;
+	width: 95%;
+	height: 85%;
+	z-index: -1;
+    background-color: #000;
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+/*        <div id="wrapper"></div>
+        <div class="winnersTitle">Winners</div>
+        <div class="winnersContainer">
+            <div class="winnerPict">1. jajaja</div>
+            <div class="winnerName">2. John Doe</div>
+        </div>
+        <div class="winnersArtworks">Rewards</div> */
+
+.winnersTitle {
+	position: relative;
+	font-size: 2.5vw;
+	text-align: center;
+}
+
+.winnersContainer {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.winnerPict {
+	position: relative;
+	background-image: url(https://i1.sndcdn.com/artworks-UIltWiaY3fMH-0-t500x500.jpg);	
+	background-size: cover;
+	width: 50px;
+	height: 50px;
+}
+
+.winnerName {
+	position: relative;
+	font-size: 1vw;
+	text-align: center;
+	margin-left: 10px;
+}
+
+.winnersArtworks {
+	position: relative;
+	background-image: url(https://dza2a2ql7zktf.cloudfront.net/binaries-cdn/dqzqcuqf9/image/fetch/ar_25:7,dpr_1.0,q_auto,f_auto,c_fill,w_2545/https://d2u3kfwd92fzu7.cloudfront.net/asset/news/Paulino_O_Hero.png);	
+	background-size: cover;
+	width: 1052px;
+	height: 300px;
+	margin-top: 30px;
+	border: #252120 2px solid;
+}
+
+.backgroundArt {
+  position: absolute;
+  background-image: url(https://dza2a2ql7zktf.cloudfront.net/binaries-cdn/dqzqcuqf9/image/fetch/ar_25:7,dpr_1.0,q_auto,f_auto,c_fill,w_2545/https://d2u3kfwd92fzu7.cloudfront.net/asset/news/Paulino_O_Hero.png);	
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background-size: cover;
+  filter: blur(3px);
+  z-index: -1;
+  border-radius: 10px;
+}
+
 
 #rewardsBtn {
 	margin-left: 15px;
@@ -854,275 +935,6 @@ body {
 
 #rewardsBtn span {
 	display: inline-block;
-}
-
-/******************************************************************************************/
-
-#leftContainer {
-	position: fixed;
-	top: 75px;
-	left: 0;
-	width: 400px;
-	height: calc(100% - 50px);
-	background-color: transparent;
-	border-top: 2.5px solid #4b749b;
-	border-right: 2.5px solid #4b749b;
-	border-top-right-radius: 23px;
-	color: var(--accent);
-
-}
-
-#map {
-	width: 100%;
-	height: 100%;
-	border-top-right-radius: 21px;
-	background-color: var(--accent);
-	color: var(--accent);
-}
-
-/***************************************/
-
-#mainContainer {
-	position: fixed;
-	background-color: transparent;
-	color: var(--text);
-	top: 85px;
-	width: 100%;
-	height: calc(100% - 50px);
-	z-index: -1;
-}
-
-.swiper-container {
-	overflow: hidden;
-	width: 100%;
-	margin-left: 20px;
-	margin-right: 20px;
-}
-
-@media (min-width: 480px) {
-	.swiper-container {
-		min-height: 320px;
-	}
-}
-
-.swiper-container-wrapper {
-	display: flex;
-	flex-flow: column nowrap;
-	height: 100vh;
-	width: 100vw;
-}
-
-@media (min-width: 480px) {
-	.swiper-container-wrapper {
-		flex-flow: row nowrap;
-	}
-}
-
-.swiper-button-next, .swiper-button-prev {
-	color: var(--text) !important;
-	scale: 0.6 !important;
-}
-
-.swiper-slide {
-    text-align: center;
-    background-size: cover;
-    background-position: center;
-    background-color: #110d08;
-    border: 2.5px solid var(--accent);
-    color: var(--text);
-    border-radius: 10px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; 
-	height: 100%;
-}
-
-.blur-content.blur {
-    filter: blur(10px);
-    border-radius: 10px;
-	width: 100%;
-	height: 100%;
-}
-
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  filter: blur(8px);
-  z-index: -1;
-}
-
-.imgs {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-height: 100%;
-  width: auto;
-  height: auto;
-}
-
-.swiper-slide .description,
-.swiper-slide .title {
-	display: block;
-}
-
-.swiper-slide .description, .swiper-slide .title {
-	display: block;
-	opacity: 0;
-	transition: 0.5s ease 0.5s;
-}
-
-.swiper-slide-active .description, .swiper-slide-active .title {
-	opacity: 1;
-}
-
-.swiper-slide-active .title {
-	margin-bottom: 0.5rem;
-	font-size: 24px;
-	color: var(--text);
-	transition: opacity 0.5s ease 0.5s;
-}
-
-.swiper-slide-active .description {
-	font-size: 16px;
-	color: var(--text);	
-	transition: opacity 0.5s ease 0.75s;
-}
-
-.gallery-top {
-	position: relative;
-	width: 100%;
-	height: 75vh;
-}
-
-@media (min-width: 480px) {
-	.gallery-top {
-		width: 80%;
-		height: 100vh;
-		margin-right: 5px;
-	}
-}
-
-.gallery-thumbs {
-	width: 100%;
-	height: 25vh;
-	padding-top: 10px;
-}
-
-@media (min-width: 480px) {
-	.gallery-thumbs {
-		width: 20%;
-		height: 100vh;
-		padding: 0;
-	}
-}
-
-.gallery-thumbs .swiper-wrapper {
-	flex-direction: row;
-}
-
-@media (min-width: 480px) {
-	.gallery-thumbs .swiper-wrapper {
-		flex-direction: column;
-	}
-}
-
-.gallery-thumbs .swiper-slide {
-	width: 25%;
-	flex-flow: row nowrap;
-	height: 100%;
-	opacity: 0.75;
-	cursor: pointer;
-}
-
-@media (min-width: 480px) {
-	.gallery-thumbs .swiper-slide {
-		flex-flow: column nowrap;
-		width: 100%;
-	}
-}
-
-.gallery-thumbs .swiper-slide-thumb-active {
-	opacity: 1;
-}
-
-
-.imagesContainer {
-	display: inline;
-	top: 10px;
-	left: 0px;
-	width: 80%;
-	height: auto;
-	border-radius: 10px;
-}
-
-.descriptionBtn {
-	position: absolute;
-	bottom: 14%;
-	right: 1%;
-	color: var(--text);
-	border: none;
-	cursor: pointer;
-	user-select: none;
-	z-index: 6;
-}
-
-.descriptionBtn:hover {
-	opacity: 0.8;
-}
-
-.descriptionBtn:active {
-	transform: scale(0.9); /* 1 / 1.1 */
-	opacity: 0.6;
-}
-
-.titleArt {
-	position: relative;
-
-	display: block !important;
-	opacity: 0 !important;
-	color: var(--text);
-	z-index: 1;
-}
-
-.textArt {
-	position: fixed;
-	top: 46%;
-	left: 0px;
-	display: flex !important;
-	justify-content: center;
-	align-items: baseline;
-	color: var(--text);
-	z-index: 1;
-	flex-direction: column;
-	margin: 0px 70px 0px 70px;
-	
-}
-
-.descriptionArt {
-	position: relative;
-	
-
-	display: block !important;
-	opacity: 0 !important;
-	color: var(--text);
-	z-index: 1;
-}
-
-.titleArt.show{
-	display: flex !important;
-	opacity: 1 !important;
-}
-
-.descriptionArt.show{
-	display: flex !important;
-	opacity: 1 !important;
 }
 
 /* Cursor */
@@ -1151,3 +963,4 @@ body {
 	pointer-events: none;
 	opacity: .5;	
 }
+
