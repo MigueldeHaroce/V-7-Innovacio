@@ -623,3 +623,4 @@ const rewardsBtn = document.getElementById('rewardsBtn');
 rewardsBtn.addEventListener('click', () => {
 	window.location.href = 'rewardsBtn.html';
 });
+

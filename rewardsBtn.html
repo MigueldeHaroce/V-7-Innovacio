@@ -40,10 +40,10 @@
                 <i class="btn-next fa fa-step-forward" aria-hidden="true" id="fa-step-forward" style="margin-left: -24.5px;"></i>
                 <i class="btn-open-player fa fa-list" aria-hidden="true"></i>
             </div>
-            <div id="homeBtn">
+            <div id="homesBtn">
                 <span>Upload</span>
             </div>
-            <div id="rewardsBtn">
+            <div id="rewardssBtn">
                 <span>Home</span>
             </div>
         </div>
@@ -100,15 +100,15 @@
 
     <div class="mainContainer" id="mainContainer">
         <div id="wrapper"></div>
-        <div class="winnersTitle">Winners</div>
+        <div class="winnersTitle">Guanyadors</div>
         <div class="winnersContainer">
             <div class="winnerPict"></div>
-            <div class="winnerName">John Doe</div>
+            <div class="winnerName">Andreu</div>
         </div>
         <div class="winnersArtworks"></div>
         <div class="backgroundArt"></div>
     </div>
-      
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -124,5 +124,18 @@
 
     <script src="index.js"></script>
 
+    <script>
+        const rewardssBtn = document.getElementById('rewardssBtn');
+        const homerBtn = document.getElementById('homesBtn');
+
+        rewardssBtn.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+
+
+        homerBtn.addEventListener('click', () => {
+            window.location.href = 'uploadPage.html';
+        });
+    </script> 
 </body>
 </html>

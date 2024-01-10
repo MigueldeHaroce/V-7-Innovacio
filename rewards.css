@@ -810,7 +810,7 @@ body {
 	opacity: 0;
 }
 
-#homeBtn {
+#homesBtn {
 	margin-left: 15px;
 	padding-right: 15px;
 	font-size: 17.5px;
@@ -819,17 +819,17 @@ body {
 	user-select: none;
 }
 
-#homeBtn:hover {
+#homesBtn:hover {
 	color: var(--accent);
 	border-right: 1px solid var(--text);
 }
 
-#homeBtn:active span {
+#homesBtn:active span {
 	transform: scale(0.9090909090909091); /* 1 / 1.1 */
 
 }
 
-#homeBtn span {
+#homesBtn span {
 	display: inline-block;
 }
 
@@ -865,6 +865,8 @@ body {
 	position: relative;
 	font-size: 2.5vw;
 	text-align: center;
+	-webkit-text-stroke: 0.5px black; /* For WebKit browsers */
+	text-shadow: 0.5px 0.5px 0 black;
 }
 
 .winnersContainer {
@@ -881,6 +883,7 @@ body {
 	background-size: cover;
 	width: 50px;
 	height: 50px;
+	border: #000 2px solid;
 }
 
 .winnerName {
@@ -888,6 +891,8 @@ body {
 	font-size: 1vw;
 	text-align: center;
 	margin-left: 10px;
+	-webkit-text-stroke: 0.25px black; /* For WebKit browsers */
+	text-shadow: 0.25px 0.25px 0 black;
 }
 
 .winnersArtworks {
@@ -914,7 +919,7 @@ body {
 }
 
 
-#rewardsBtn {
+#rewardssBtn {
 	margin-left: 15px;
 	padding-right: 15px;
 	font-size: 17.5px;
@@ -923,17 +928,17 @@ body {
 	user-select: none;
 }
 
-#rewardsBtn:hover {
+#rewardssBtn:hover {
 	color: var(--accent);
 	border-right: 1px solid var(--text);
 }
 
-#rewardsBtn:active span {
+#rewardssBtn:active span {
 	transform: scale(0.9090909090909091); /* 1 / 1.1 */
 
 }
 
-#rewardsBtn span {
+#rewardssBtn span {
 	display: inline-block;
 }
 

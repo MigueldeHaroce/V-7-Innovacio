@@ -864,7 +864,7 @@ body {
     border-right: 1px solid var(--text);
     background-color: #fff;
     width: 153px;
-    border: #000 solid 1px;
+    border: #000 solid 2px;
 	border-radius: 2.5px;
 }
 

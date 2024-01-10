@@ -41,10 +41,10 @@
                 <i class="btn-open-player fa fa-list" aria-hidden="true"></i>
             </div>
             <div id="homeBtn">
-                <span>Home</span>
+                <span>Inici</span>
             </div>
             <div id="rewardsBtn">
-                <span>Premios</span>
+                <span>Premis</span>
             </div>
         </div>
         <div class="dim"></div>
@@ -54,7 +54,7 @@
                 <div class="playback_thumb"></div>
                 <div class="playback_info">
                     <div class="title">Friday Comes</div>
-                    <div class="artist">Amongus</div>
+                    <div class="artist">Andreu</div>
                 </div>
                 <div class="playback_btn_wrapper">
                     <i class="btn-prev fa fa-step-backward" aria-hidden="true"></i>
@@ -102,23 +102,23 @@
         <form class="form-container" enctype='multipart/form-data'>
             <div class="upload-files-container">
                 <div class="drag-file-area">
-                    <span class="material-icons-outlined upload-icon"> Share your Art! </span>
-                    <h3 class="dynamic-message"> Drag & drop any file here </h3>
-                    <div class="label"> or 
+                    <span class="material-icons-outlined upload-icon"> Comparteix el teu Art! </span>
+                    <h3 class="dynamic-message"> Deixeu anar el fitxer </h3>
+                    <div class="label"> o 
                         <span class="browse-files"> 
                             <input type="file" class="default-file-input"/> 
-                            <span class="browse-files-text">browse file</span> 
-                            <span>from device</span> 
+                            <span class="browse-files-text">cercar fitxer </span> 
+                            <span>de l'ordinador</span> 
                         </span> 
                     </div>
                 </div>
-                <span class="cannot-upload-message">  Please select a file first <span class="material-icons-outlined cancel-alert-button">| Cancel</span> </span>
+                <span class="cannot-upload-message">  Si us plau selecciona primer el teu fitxer <span class="material-icons-outlined cancel-alert-button">| Cancelar</span> </span>
                 <div class="file-block">
                     <div class="file-info"> <span class="material-icons-outlined file-icon"></span> <span class="file-name"> </span> | <span class="file-size">  </span> </div>
-                    <span class="material-icons remove-file-icon">delete</span>
+                    <span class="material-icons remove-file-icon">Borrar </span>
                     <div class="progress-bar"> </div>
                 </div>
-                <button type="button" class="upload-button"> Upload </button>
+                <button type="button" class="upload-button"> Pujar </button>
             </div>
         </form>
     </div>
@@ -136,6 +136,14 @@
     <script src="appFunctions_upload.js"></script>
 
     <script src="index.js"></script>
+
+    <script>
+        const rewardsssBtn = document.getElementById('rewardsBtn');
+
+        rewardsssBtn.addEventListener('click', () => {
+            window.location.href = 'rewardsBtn.html';
+        });
+    </script>
 
 </body>
 </html>
