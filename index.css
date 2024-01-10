@@ -856,6 +856,22 @@ body {
 	display: inline-block;
 }
 
+#andBanner {
+	margin-left: 15px;
+	padding-right: 15px;
+	font-size: 17.5px;
+    height: 55px;
+    border-right: 1px solid var(--text);
+    background-color: #fff;
+    width: 153px;
+    border: #000 solid 1px;
+	border-radius: 2.5px;
+}
+
+#banner {
+	width: 150px;
+}
+
 /******************************************************************************************/
 
 #leftContainer {
