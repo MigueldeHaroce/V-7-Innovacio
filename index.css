@@ -316,7 +316,7 @@ body {
 	background-color: var(--text);
 	border-radius: 2px;
 	background-size: cover;
-	background-image: url(https://i1.sndcdn.com/artworks-UIltWiaY3fMH-0-t500x500.jpg);
+	background-image: url(https://i.scdn.co/image/ab67616d00001e02e9cc955ce6a2b75b0806be84);
 	margin-left: 15px;
 }
 
@@ -409,7 +409,7 @@ body {
 	transform: scale(1.1);
 	filter: blur(32px);
 	opacity: 0.24;
-	background-image: url(https://i1.sndcdn.com/artworks-UIltWiaY3fMH-0-t500x500.jpg);
+	background-image: url(https://i.scdn.co/image/ab67616d00001e02e9cc955ce6a2b75b0806be84);
 }
 
 .playback_thumb {
@@ -421,7 +421,7 @@ body {
 	position: absolute;
 	margin: 35px;
 	box-shadow: 0px 12px 30px 0px rgba(97, 45, 45, 0.2);
-	background-image: url(https://i1.sndcdn.com/artworks-UIltWiaY3fMH-0-t500x500.jpg);
+	background-image: url(https://i.scdn.co/image/ab67616d00001e02e9cc955ce6a2b75b0806be84);
 }
 
 .playback_info {
@@ -1129,6 +1129,7 @@ body {
 	opacity: 0 !important;
 	color: var(--text);
 	z-index: 1;
+	justify-items: left;
 }
 
 .titleArt.show{
