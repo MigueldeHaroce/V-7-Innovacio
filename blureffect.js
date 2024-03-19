@@ -1,7 +1,5 @@
-// Get the reference to all the swiper slides
 const swiperSlides = document.querySelectorAll('.swiper-slide');
 
-// Function to change the background image of each slide
 function changeBackgroundImage() {
   swiperSlides.forEach((slide) => {
     const currentPhoto = slide.querySelector('.imgs').getAttribute('src');
@@ -10,5 +8,4 @@ function changeBackgroundImage() {
   });
 }
 
-// Call the function to initially set the background images
 changeBackgroundImage();
