@@ -491,25 +491,20 @@ function changeBackgroundImage() {
 }
 
 changeBackgroundImage();
+
 // ==== Main Colors ====
 
-// Create a new ColorThief object
 var colorThief = new ColorThief();
 
-// Function to get the main color of the artwork
 function getMainColor(artworkUrl) {
-    // Create a new Image object
     var img = new Image();
     console.log("artworkUrl: " + artworkUrl);
-        // Set the image source
-    img.crossOrigin = 'Anonymous'; // This enables CORS
-// Set the image source
+
+    img.crossOrigin = 'Anonymous'; 
     img.src = 'https://cors-anywhere.herokuapp.com/' + artworkUrl;
     console.log("img.src: " + img.src);
-    // When the image has loaded
-       // Check if the image is fully loaded
+
     if (true) {
-        // Get the dominant color
 
 
         setTimeout(function() {
@@ -519,59 +514,43 @@ function getMainColor(artworkUrl) {
             var dominantColor = colorThief.getPalette(img, 2);
             console.log("dominantColor: " + dominantColor);
 
-            // Set the theme based on the main color
             setTheme(dominantColor);
-        }, 500); // Delay of 5 seconds
+        }, 50); 
     }
 
 }
     
-// Function to set the theme based on the main color
-// Function to set the theme based on the main color
-// Function to set the theme based on the main color
 function setTheme(mainColor) {
-    // Get the root element
+
     var root = document.documentElement;
 
-    // Set the CSS variables based on the main color
     root.style.setProperty('--bg_01', `rgb(${mainColor[0]})`);
     root.style.setProperty('--bg_02', `rgb(${mainColor[1]})`);
 
-    // Calculate the brightness of the main color
     var brightness = Math.round(((parseInt(mainColor[0][0]) * 299) +
                       (parseInt(mainColor[0][1]) * 587) +
                       (parseInt(mainColor[0][2]) * 114)) / 1000);
 
-    // If the color is closer to black, set the theme to 'dark'
-    // If the color is closer to white, set the theme to 'light'
-    var theme = (brightness > 125) ? 'dark' : 'light';
+    var theme = (brightness < 125) ? 'dark' : 'light';
 
     root.setAttribute('data-theme', theme);
 }
 
 window.onload = function() {
-    // Get the swiper instance
     var swiper = document.querySelector('.swiper-container').swiper;
 
-    // Get the active slide element
     var activeSlide = swiper.slides[swiper.activeIndex];
 
-    // Get the artwork element
     var artwork = activeSlide.querySelector('.imgs');
 
-    // Get the main color of the artwork
     getMainColor(artwork.src);
     console.log("artwork.src: " + artwork.src);
 
-    // Add an event listener for the slideChange event
     swiper.on('slideChange', function () {
-        // Get the new active slide element
         var newActiveSlide = swiper.slides[swiper.activeIndex];
 
-        // Get the new artwork element
         var newArtwork = newActiveSlide.querySelector('.imgs');
 
-        // Get the main color of the new artwork
         getMainColor(newArtwork.src);
         console.log("newArtwork.src: " + newArtwork.src);
     });
