@@ -47,6 +47,27 @@ $( ".burger-wrapper" ).click(function() {
 
 });
 
+$( ".burger-wrapper" ).click(function() {
+	
+	if($('.nav').css("display") == "none"){
+		TweenMax.to(".dim", 0.5, {opacity: 1, display: 'block', ease: Power2.easeInOut});
+		TweenMax.fromTo(".nav", 0.5, {xPercent: -100}, 
+									{xPercent: 0, display: 'block', ease: Expo.easeOut});
+		TweenMax.staggerFrom('.nav li', 0.5, {opacity:0, y: 20, ease: Power2.easeInOut}, 0.1);
+		
+		$('.logo-text').css({'opacity': '0', 'display': 'none'});
+	}
+	else if($('.nav').css("display") == "block" && $('#curator').css("display") == "block"){
+ 		TweenMax.to(".dim", 0.5, {opacity: 0, display: 'none', ease: Power2.easeInOut});
+		TweenMax.to(".nav", 0.5, {xPercent: -100, display:'none', ease: Expo.easeOut});
+		// $('.logo-text').css({'opacity': '1', 'display': 'block'});
+	}
+	else {
+	  TweenMax.to(".dim", 0.5, {opacity: 0, display: 'none', ease: Power2.easeInOut});
+		TweenMax.to(".nav", 0.5, {xPercent: -100, display:'none', ease: Expo.easeOut});
+		$('.logo-text').css({'opacity': '1', 'display': 'block'});
+	}
+});
 
 // ===== Open Player + dim =====
 
@@ -174,167 +195,6 @@ $('.text-wrap .text').click(function(){
 	
 });
 
-
-// ===== Item Activate =====
-
-$('.item').click(function(){
-	var mainToPlaylist = new TimelineMax({});
-	
-	mainToPlaylist.to($('#curator'), 0.8, {display: 'none', opacity: 0, scale: 1.1, ease: Power2.easeInOut}, 0)
-			
-	// mainToPlaylist.fromTo($('.curator_list'), 0.5, {opacity: 1, display: 'block', x: 0},
-	// {opacity: 0, x: 30, display: 'none', ease: Power2.easeInOut}, 0.5),
-});
-
-// ===== Open Nav =====
-$( ".burger-wrapper" ).click(function() {
-	
-	if($('.nav').css("display") == "none"){
-		TweenMax.to(".dim", 0.5, {opacity: 1, display: 'block', ease: Power2.easeInOut});
-		TweenMax.fromTo(".nav", 0.5, {xPercent: -100}, 
-									{xPercent: 0, display: 'block', ease: Expo.easeOut});
-		TweenMax.staggerFrom('.nav li', 0.5, {opacity:0, y: 20, ease: Power2.easeInOut}, 0.1);
-		
-		$('.logo-text').css({'opacity': '0', 'display': 'none'});
-	}
-	else if($('.nav').css("display") == "block" && $('#curator').css("display") == "block"){
- 		TweenMax.to(".dim", 0.5, {opacity: 0, display: 'none', ease: Power2.easeInOut});
-		TweenMax.to(".nav", 0.5, {xPercent: -100, display:'none', ease: Expo.easeOut});
-		// $('.logo-text').css({'opacity': '1', 'display': 'block'});
-	}
-	else {
-	  TweenMax.to(".dim", 0.5, {opacity: 0, display: 'none', ease: Power2.easeInOut});
-		TweenMax.to(".nav", 0.5, {xPercent: -100, display:'none', ease: Expo.easeOut});
-		$('.logo-text').css({'opacity': '1', 'display': 'block'});
-	}
-});
-
-
-// ===== Open Player + dim =====
-
-$( ".btn-open-player, .track_info" ).click(function() {
-  TweenMax.to(".dim", 0.5, {opacity: 1, display: 'block', ease: Power2.easeInOut});
-	TweenMax.fromTo("#player", 0.5, {xPercent: 100}, 
-	{xPercent: 0, display: 'block', ease: Expo.easeOut});
-	TweenMax.to(".mini-player", 0.5, {x: 50, ease: Expo.easeOut});
-});
-
-$('.dim').click(function() {
-	TweenMax.to(".dim", 0.5, {opacity: 0, display: 'none', ease: Power2.easeInOut});
-	TweenMax.to("#player", 0.5, {xPercent: 100, display: 'none', ease: Expo.easeOut});
-	TweenMax.to(".nav", 0.5, {xPercent: -100, display: 'none', ease: Power2.easeInOut})
-	TweenMax.to(".mini-player", 0.5, {x: 0, ease: Expo.easeOut});
-});
-
-// ===== Mini Player =====
-
-$('.btn-play').click(function(){
-	TweenMax.to($('.btn-play'), 0.2, {x: 10, opacity: 0, scale: 0.3,  display: 'none', ease: Power2.easeInOut});
-	TweenMax.fromTo($('.btn-pause'), 0.2, {x: -10, opacity: 0, scale: 0.3, display: 'none'},
-	{x: 0, opacity: 1, scale: 1, display: 'block', ease: Power2.easeInOut});
-});
-
-$('.btn-pause').click(function(){
-	TweenMax.to($('.btn-pause'), 0.2, {x: 10, opacity: 0, display: 'none', scale: 0.3, ease: Power2.easeInOut});
-	TweenMax.fromTo($('.btn-play'), 0.2, {x: -10, opacity: 0, scale: 0.3, display: 'none'},
-	{x: 0, opacity: 1, display: 'block', scale: 1, ease: Power2.easeInOut});
-});
-
-// ===== Flash Effect =====
-
-$('.track_info').hover(function(){
-	
-	TweenMax.fromTo($(this), 0.5, {opacity: 0.5, ease: Power2.easeInOut},
-	{opacity: 1})},
-	function(){
-		$(this).css("opacity", "1");
-});
-
-$('.burger-wrapper, .logo-text, .back_btn').hover(function(){
-	
-	TweenMax.fromTo($(this), 0.5, {opacity: 0.5, ease: Power2.easeInOut},
-	{opacity: 1})},
-	function(){
-		$(this).css("opacity", "1")
-});
-
-$('.btn-open-player').hover(function(){
-	
-	TweenMax.fromTo($(this), 0.5, {opacity: 0.5, ease: Power2.easeInOut},
-	{opacity: 1})},
-	function(){
-		$(this).css("opacity", "1")
-});
-
-$('.nav a').hover(function(){
-	
-	TweenMax.fromTo($(this), 0.5, {opacity: 0.5, ease: Power2.easeInOut},
-	{opacity: 1})},
-	function(){
-		$(this).css("opacity", "1")
-});
-
-// ===== Player - List Items =====
-$('.list_item').click(function() {
-	$('.list_item').removeClass('selected');
-	$(this).addClass('selected');
-});
-
-
-// ===== Main Play Button - Hover =====
-	
-$('.text-wrap .text').hover(function(){
-	TweenMax.to($('.main-btn_wrapper'), 0.5, {opacity: 1, display: 'block', position: 'absolute', scale: 1, ease: Elastic.easeOut.config(1, 0.75)}),
-	TweenMax.to($('.line'), 0.5, {css: { scaleY: 0.6, transformOrigin: "center center" }, ease: Expo.easeOut})},
-								 
-	function(){
-		TweenMax.to($('.main-btn_wrapper'), 0.5, {opacity: 0, display: 'none', scale: 0, ease: Elastic.easeOut.config(1, 0.75)}),
-		TweenMax.to($('.line'), 0.5, {css: { scaleY: 1, transformOrigin: "center center" }, ease: Expo.easeOut})
-});
-
-
-// ===== List  =====
-$('.item').hover(function(){
-	TweenMax.to($(this), 0.5, {y: -30, ease: Power2.easeInOut}),	
-	$(this).children('.thumb').addClass('shadow'),
-	$(this).children('.connect_btn').addClass('shadow'),
-		
-	TweenMax.to($(this).children('.info'), 0.5, {opacity: 1, ease: Power2.easeInOut})
-	},
-								 
-	function(){
-		TweenMax.to($(this), 0.5, {y: 0, ease: Power2.easeInOut}),
-		$(this).children('.thumb').removeClass('shadow'),
-		$(this).children('.connect_btn').removeClass('shadow'),
-			
-		TweenMax.to($(this).children('.info'), 0.5, {opacity: 0, ease: Power2.easeInOut})
-});
-
-
-// ===== Main Play Button Activate =====
-
-$('.text-wrap .text').click(function(){
-	
-	var homeToMain = new TimelineMax({});
-	
-	$('.logo-text').css('display', 'none'),
-	homeToMain.to($('.line, .text-wrap'), 0.5, {display: 'none', opacity: 0, y: -20, ease: Power2.easeInOut}, 0),
-	
-	homeToMain.to($('.wave-container'), 1, {yPercent: 30, ease: Power2.easeInOut}, 0),
-		
-	$('#curator').css('display', 'block'),
-	homeToMain.fromTo($('.back_btn'), 0.8, {x: 15},
-	{display: 'flex', opacity: 1, x: 0, ease: Power2.easeInOut}, 1),
-		
-	homeToMain.fromTo($('.curator_title_wrapper'), 0.8, {opacity: 0, x: 30},
-	{opacity: 1, x: 0, ease: Power2.easeInOut}, 1),
-		
-	homeToMain.fromTo($('.curator_list'), 0.8, {opacity: 0, display: 'none', x: 30},
-	{opacity: 1, x: 0, display: 'block', ease: Power2.easeInOut}, 1.2)
-	
-});
-
-
 // ===== Item Activate =====
 $('.item').click(function(){
 	var mainToPlaylist = new TimelineMax({});
@@ -349,8 +209,8 @@ $('.item').click(function(){
 
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 40.674, lng: -73.945 },
-    zoom: 12,
+    center: { lat: 42.542, lng: 1.5976 },
+    zoom: 10,
     styles: [
       { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
       { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
@@ -429,6 +289,11 @@ function initMap() {
         featureType: "water",
         elementType: "labels.text.stroke",
         stylers: [{ color: "#17263c" }],
+      },
+	  {
+        featureType: "administrative.country",
+        elementType: "geometry.stroke",
+        stylers: [{ color: "#4e5d6e" }], // Change this to the color you want for the borders
       },
     ],
   });
@@ -608,3 +473,106 @@ rewardsBtn.addEventListener('click', () => {
 	window.location.href = 'rewardsBtn.html';
 });
 
+// ==== Background ====
+const swiperSlides = document.querySelectorAll('.swiper-slide');
+
+function changeBackgroundImage() {
+  swiperSlides.forEach((slide) => {
+    const imgElement = slide.querySelector('.imgs');
+    if (imgElement) { // Check if the imgElement is not null
+      const currentPhoto = imgElement.src;
+      const imageUrl = `url(${currentPhoto})`;
+      const backgroundElement = slide.querySelector('.background');
+      if (backgroundElement) { // Check if the backgroundElement is not null
+        backgroundElement.style.backgroundImage = imageUrl;
+      }
+    }
+  });
+}
+
+changeBackgroundImage();
+// ==== Main Colors ====
+
+// Create a new ColorThief object
+var colorThief = new ColorThief();
+
+// Function to get the main color of the artwork
+function getMainColor(artworkUrl) {
+    // Create a new Image object
+    var img = new Image();
+    console.log("artworkUrl: " + artworkUrl);
+        // Set the image source
+    img.crossOrigin = 'Anonymous'; // This enables CORS
+// Set the image source
+    img.src = 'https://cors-anywhere.herokuapp.com/' + artworkUrl;
+    console.log("img.src: " + img.src);
+    // When the image has loaded
+       // Check if the image is fully loaded
+    if (true) {
+        // Get the dominant color
+
+
+        setTimeout(function() {
+
+            console.log("img.src1111: " + img.src);
+            
+            var dominantColor = colorThief.getPalette(img, 2);
+            console.log("dominantColor: " + dominantColor);
+
+            // Set the theme based on the main color
+            setTheme(dominantColor);
+        }, 500); // Delay of 5 seconds
+    }
+
+}
+    
+// Function to set the theme based on the main color
+// Function to set the theme based on the main color
+// Function to set the theme based on the main color
+function setTheme(mainColor) {
+    // Get the root element
+    var root = document.documentElement;
+
+    // Set the CSS variables based on the main color
+    root.style.setProperty('--bg_01', `rgb(${mainColor[0]})`);
+    root.style.setProperty('--bg_02', `rgb(${mainColor[1]})`);
+
+    // Calculate the brightness of the main color
+    var brightness = Math.round(((parseInt(mainColor[0][0]) * 299) +
+                      (parseInt(mainColor[0][1]) * 587) +
+                      (parseInt(mainColor[0][2]) * 114)) / 1000);
+
+    // If the color is closer to black, set the theme to 'dark'
+    // If the color is closer to white, set the theme to 'light'
+    var theme = (brightness > 125) ? 'dark' : 'light';
+
+    root.setAttribute('data-theme', theme);
+}
+
+window.onload = function() {
+    // Get the swiper instance
+    var swiper = document.querySelector('.swiper-container').swiper;
+
+    // Get the active slide element
+    var activeSlide = swiper.slides[swiper.activeIndex];
+
+    // Get the artwork element
+    var artwork = activeSlide.querySelector('.imgs');
+
+    // Get the main color of the artwork
+    getMainColor(artwork.src);
+    console.log("artwork.src: " + artwork.src);
+
+    // Add an event listener for the slideChange event
+    swiper.on('slideChange', function () {
+        // Get the new active slide element
+        var newActiveSlide = swiper.slides[swiper.activeIndex];
+
+        // Get the new artwork element
+        var newArtwork = newActiveSlide.querySelector('.imgs');
+
+        // Get the main color of the new artwork
+        getMainColor(newArtwork.src);
+        console.log("newArtwork.src: " + newArtwork.src);
+    });
+};

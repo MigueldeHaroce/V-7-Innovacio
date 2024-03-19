@@ -10,6 +10,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
  /* https://www.realtimecolors.com/?colors=ffffff-0a0805-233648-110d08-4b749b&fonts=Poppins-Poppins */
+:root {
+  transition: all 0.5s ease;
+}
+
 :root[data-theme="dark"] {
   --text: #ffffff;
   --background: #0a0805;
@@ -58,21 +62,21 @@ a {
 	 text-decoration: none;
 }
 body {
-	 background: linear-gradient(252deg, var(--bg_01), var(--bg_02));
-	 background-size: 400% 400%;
+	background: linear-gradient(252deg, var(--bg_01), var(--bg_02));
+	background-size: 400% 400%;
  
-	 -webkit-animation: AnimationName 35s ease infinite;
-	 -moz-animation: AnimationName 35s ease infinite;
-	 animation: AnimationName 35s ease infinite;
+	-webkit-animation: AnimationName 35s ease infinite;
+	-moz-animation: AnimationName 35s ease infinite;
+	animation: AnimationName 35s ease infinite;
+    transition: background 0.5s ease;
 
-	 font-family: 'Oswald', sans-serif;
+	font-family: 'Oswald', sans-serif;
 
-	 font-size: 1rem;
-	 overflow: hidden;
-	 width: 100vw;
-	 z-index: 0;
-	 background-color: #fff;
-
+	font-size: 1rem;
+	overflow: hidden;
+	width: 100vw;
+	z-index: 0;
+	background-color: #fff;
 }
 
 * {
@@ -943,8 +947,8 @@ body {
     text-align: center;
     background-size: cover;
     background-position: center;
-    background-color: #110d08;
-    border: 2.5px solid var(--accent);
+    background-color: #4e5d6e;
+    border: 2.5px solid #4e5d6e;
     color: var(--text);
     border-radius: 10px;
     display: flex;
